@@ -15,15 +15,15 @@ export const ProductItem = ({ product }) => (
           src={product.images[0].src}
           fill={true}
           alt={product.name}
-          priority={true}
           placeholder="blur"
-          blurDataURL={product.images[0].src}
           className="!object-cover rounded-md transition-all duration-300 group-hover:!-top-11 z-20"
-          sizes="(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw"
         />
       </Link>
       <div className="actions absolute w-full px-2 flex items-center justify-center gap-2 bottom-1 z-0 text-slate-50">
-        <Link className="rounded-md px-4 py-1 w-full flex justify-center items-center bg-primary hover:opacity-80" href={`/productos/${product.id}`}>
+        <Link
+          className="rounded-md px-4 py-1 w-full flex justify-center items-center bg-primary hover:opacity-80"
+          href={`/productos/${product.id}`}
+        >
           <i className="ri-eye-line text-xl"></i>
         </Link>
         <button className="rounded-md px-4 py-1 w-full flex justify-center items-center bg-neutral hover:opacity-80 relative">
@@ -38,7 +38,11 @@ export const ProductItem = ({ product }) => (
       </Link>
       <div className="card-actions justify-end">
         {product.categories.map((category) => (
-          <Link href={`/productos/categorias/${category.slug}-${category.id}`} key={category.id} className="badge badge-primary">
+          <Link
+            href={`/productos/categorias/${category.slug}-${category.id}`}
+            key={category.id}
+            className="badge badge-primary"
+          >
             {category.name}
           </Link>
         ))}
