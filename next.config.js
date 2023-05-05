@@ -4,7 +4,7 @@ const nextConfig = {
     appDir: true,
   },
   images: {
-    domains: ['tuespaciodeco.local'],
+    domains: ['tuespaciodeco.local', "tuespaciodeco.com.ar"],
   },
 };
 
