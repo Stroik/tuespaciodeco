@@ -9,7 +9,7 @@ export const metadata = {
 };
 
 async function getSliderProducts() {
-  const response = await fetch(`${process.env.API_URL}/products/category/${SLIDER_CAT}`, { cache: 'no-store' });
+  const response = await fetch(`${process.env.API_URL}/products/category/${process.env.SLIDER_CAT}`, { cache: 'no-store' });
   const { products } = await response.json();
   return products;
 }
